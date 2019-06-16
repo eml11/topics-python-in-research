@@ -516,6 +516,7 @@ g++ -I /headerfile/dir -L /library/dir -llibrary -o outputfilename
   
 #+BEGIN_SRC c
 int i, count, n;
+count = 0;
 n = 10;
 for (i=0;i++;i<n)
 {
