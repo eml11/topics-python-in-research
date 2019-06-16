@@ -393,7 +393,7 @@ git clone <project url>
 #+END_SRC
 - for this course specifically
 #+BEGIN_SRC bash
-git clone https://github.com/juhaj/topics-python-in-research
+git clone https://github.com/eml11/topics-python-in-research
 #+END_SRC   
 - From now on we will be using a clone of the repository of this course to demostrate
   how =git= works.
@@ -464,7 +464,7 @@ git revert <previous-revision-id>
 - Code can be compiled to different types of binary files which have different 
   purposes. There is often different types of code file in a language to deal
   with class/function decleration and writting libraries of common functions/classes.
-- Object files are the result of compiling a single executable. Multiple object
+- Object files are the result of compiling a single file. Multiple object
   files can be combined to produced executables or shared libraries.
 - Executables are files which can be run, i.e. they are the programs actually
   used by the user.
