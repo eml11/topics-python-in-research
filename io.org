@@ -11,7 +11,7 @@
   - horribly space wasting (unless compressed, which then harms portability)
   - horribly slow as everything needs to be converted
     - unless your actual calculations are done using letters
-  - cannot really be parallelised so in parallel even more slower
+  - cannot really be parallelised so in parallel even slower
 - some file formats will be hard or impossible to open on another computer so
 - avoid machine dependent I/O, like
   - The unformatted IO in Fortran
