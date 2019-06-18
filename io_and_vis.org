@@ -77,7 +77,7 @@
   kind of textual data, even strings!
 - but it is not fast, no text import ever is
 - we'll later show how to plot this
-*** COMMENT Reading a HDF5 dataset using h5py
+*** Reading a HDF5 dataset using h5py
 - HDF5 is a hierarchical data format, you can think of it as a file system of a sort, but inside the file:
   - data lives in a =dataset=, of any dimensionality and various types (integer, float, double...)
   - metadata in an =attribute=
