@@ -42,7 +42,7 @@
 #+END_SRC
 
 #+RESULTS:
-: # This file contains a bunch of point particles of varying locationg, speeds, 
+: # This file contains a bunch of point particles of varying locations, speeds, 
 : # masses and charges
 : X	Y	Z	Vx	Vy	Vz	mass	charge
 : 0	0	0	0	0	0.1	100.0	0.0
