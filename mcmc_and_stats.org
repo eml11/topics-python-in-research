@@ -60,7 +60,7 @@ Y_{i j} = X_{i j} - \bar{X_j}
 \end{equation}
   3) Compute the covariance matrix of the data.This is given as,
  \begin{equation}
- {\rm Cov}_{j k} = \frac{1}{N + 1}\sum_1^N Y_{i j} Y_{i k}
+ {\rm Cov}_{j k} = \frac{1}{N - 1}\sum_1^N Y_{i j} Y_{i k}
  \end{equation}
   4) Solve an for the eigenvalues/vectors for ${\rm Cov}_{j k}$
   5) Order the eigenvectors according to the eigenvalues that corresponding
