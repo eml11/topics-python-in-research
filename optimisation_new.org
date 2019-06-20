@@ -19,6 +19,8 @@ Numerical Optimisation
 
  * Where G is an (in priciple nonlinear) opperator, and x^{\prime} and $d$ live in (different) vector spaces.
  * The dimensions of x^{\prime} and d need not be the same.
+ * I will refer to x^{\prime}'s vector space as model space and d's as data space (This is just a terminology
+   from a particular application of optimisation).
  * If x is a trial solution to the above then we have the residual
 
  r = G x - d
@@ -50,4 +52,31 @@ Numerical Optimisation
  
   \phi = |G x - d|_N + \mu_1 |x|_N + \mu_2 |\nabla x |_N
   
-  * where \mu_1 and \mu_2 are trade off parameters
+ * where \mu_1 and \mu_2 are trade off parameters
+ * We now minimise this new objective function
+ * The first of these penalises the solver for making x too large
+ * The second penalises the solver if x isn't smooth
+ * As an example if G were a Singular/Near Singular Matrix then the first term is equivilent to adding a small
+   value to the diagonal of this matrix so it can be inverted without running into floating point issues
+   
+* Methods of Minimising \phi
+ * There are many methods of minimising \phi
+ * One example is steepest decent - which is essentially a multi-dimensional Newton Raphson
+ * The Algorithm is as follows
+ 
+  1) Calculate the gradient of \phi : \nabla \phi(x_i)
+  2) Conpute a new solution candidate x_{i+1} = x_i - h \nabla \phi(x_i), h is the step size 
+  3) Compute \phi(x_{i+1})
+  4) Accept if \phi(x_i) > \phi(x_{i+1})
+ 
+ * This can be improved in several ways
+  * The size of h can be determinded by a line-seach algorythm, i.e. a mini 1D optimisation problem to determine
+    h within our multidimensional optimisation problem
+  * The step directions calculated by steepest decent are orthogonal in 'model space'. It would
+    be better if they were orthogonal in 'data space'. A closely related algrythm is the conjugate
+    gradient method which garuntees orthogonality in data space.
+  
+  
+ 
+ 
+ 
