@@ -15,49 +15,39 @@ Numerical Optimisation
  * Many problems can be rewritten as an optimisation problem
  * e.g.
 
- \begin{equation}
  G x^{\prime} = d
- \end{equation}
 
- * Where $G$ is an (in priciple nonlinear) opperator, and $x^{\prime}$ and $d$ live in (different) vector spaces.
- * The dimensions of $x^{\prime}$ and $d$ need not be the same.
- * If $x$ is a trial solution to the above then we have the residual
+ * Where G is an (in priciple nonlinear) opperator, and x^{\prime} and $d$ live in (different) vector spaces.
+ * The dimensions of x^{\prime} and d need not be the same.
+ * If x is a trial solution to the above then we have the residual
 
- \begin{equation}
  r = G x - d
- \end{equation}
 
- * To solve have to find a way of improving our guess for $x$ so that $r=0$
+ * To solve have to find a way of improving our guess for x so that r=0
 
 * The Objective Function
  * Normal way to do this is with an objective function
 
- \begin{equation}
  \phi = |G x - d|_N
- \end{equation}
  
  * Where $|\cdot|_N$ is some appropriate norm
- * Now the solution corresponds to finding the minima of $\phi$ i.e. find
+ * Now the solution corresponds to finding the minima of \phi i.e. find
  
-  \begin{equation}
   \frac{\delta \phi}{\delta x} = 0
-  \end{equation}
   
- * Where the $\delta$ denote functional derivatives
- * In minimising $\phi$ we want to make use of the gradient information as this allows for faster convergence
+ * Where the \delta denote functional derivatives
+ * In minimising \phi we want to make use of the gradient information as this allows for faster convergence
  * Can get this numerically
- * Alternatively if $\phi$ takes the form of an action then we can obtain this from a Euler-Lagrange Equation
+ * Alternatively if \phi takes the form of an action then we can obtain this from a Euler-Lagrange Equation
  
 * Regulerisation
- * In general $G x = d$ is quite generic and can include massively over/underdetermined systems
+ * In general G x = d is quite generic and can include massively over/underdetermined systems
  * $G$ can also be singular/near singular
  * This can lead to unstable solutions which can be highly non-smooth/contain very large values
  * The solution to this is regulerisation, we modify the objective function so that it penalises unwanted
    behaviour in the solution
  * e.g.
  
-  \begin{equation}
   \phi = |G x - d|_N + \mu_1 |x|_N + \mu_2 |\nabla x |_N
-  \end{equation}
   
-  * where $\mu_1$ and $\mu_2$ are trade off parameters
+  * where \mu_1 and \mu_2 are trade off parameters
