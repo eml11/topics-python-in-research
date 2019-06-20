@@ -1,4 +1,4 @@
-Numerical Optimisation
+* Numerical Optimisation
 
 * Representation of Functions
  * possibly should go here?
@@ -17,7 +17,7 @@ Numerical Optimisation
 
  G x^{\prime} = d
 
- * Where G is an (in priciple nonlinear) opperator, and x^{\prime} and $d$ live in (different) vector spaces.
+ * Where G is an (in priciple nonlinear) opperator, and x^{\prime} and d live in (different) vector spaces.
  * The dimensions of x^{\prime} and d need not be the same.
  * I will refer to x^{\prime}'s vector space as model space and d's as data space (This is just a terminology
    from a particular application of optimisation).
@@ -76,7 +76,7 @@ Numerical Optimisation
     be better if they were orthogonal in 'data space'. A closely related algrythm is the conjugate
     gradient method which garuntees orthogonality in data space.
   
-  
+[[optimsiation_method_images.png]]
  
  
  
