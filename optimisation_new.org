@@ -1,36 +1,36 @@
-# Numerical Optimisation
+Numerical Optimisation
 
-## Representation of Functions
-* possibly should go here?
+* Representation of Functions
+ * possibly should go here?
 
-## Numerical Calculus
-* Needed for some of the optimisation algorythms
-* Different ways of calculating derivatives
-* Finite Difference, with different orders depending on number of neighbours
-* Difference Stencil
-* Collocation Methods, can represent function/data in terms of some basis 
+* Numerical Calculus
+ * Needed for some of the optimisation algorythms
+ * Different ways of calculating derivatives
+ * Finite Difference, with different orders depending on number of neighbours
+ * Difference Stencil
+ * Collocation Methods, can represent function/data in terms of some basis 
   functions whose derivatives are easy to compute (in fact all numerical differentiation is this).
   
-## General Problems as Optimisation Problems
-* Many problems can be rewritten as an optimisation problem
-* e.g.
+* General Problems as Optimisation Problems
+ * Many problems can be rewritten as an optimisation problem
+ * e.g.
 
  \begin{equation}
  G x^{\prime} = d
  \end{equation}
 
-* Where $G$ is an (in priciple nonlinear) opperator, and $x^{\prime}$ and $d$ live in (different) vector spaces.
-* The dimensions of $x^{\prime}$ and $d$ need not be the same.
-* If $x$ is a trial solution to the above then we have the residual
+ * Where $G$ is an (in priciple nonlinear) opperator, and $x^{\prime}$ and $d$ live in (different) vector spaces.
+ * The dimensions of $x^{\prime}$ and $d$ need not be the same.
+ * If $x$ is a trial solution to the above then we have the residual
 
  \begin{equation}
  r = G x - d
  \end{equation}
 
-* To solve have to find a way of improving our guess for $x$ so that $r=0$
+ * To solve have to find a way of improving our guess for $x$ so that $r=0$
 
-## The Objective Function
-* Normal way to do this is with an objective function
+* The Objective Function
+ * Normal way to do this is with an objective function
 
  \begin{equation}
  \phi = |G x - d|_N
@@ -48,7 +48,7 @@
  * Can get this numerically
  * Alternatively if $\phi$ takes the form of an action then we can obtain this from a Euler-Lagrange Equation
  
- ## Regulerisation
+* Regulerisation
  * In general $G x = d$ is quite generic and can include massively over/underdetermined systems
  * $G$ can also be singular/near singular
  * This can lead to unstable solutions which can be highly non-smooth/contain very large values
