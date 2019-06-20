@@ -79,4 +79,7 @@
 [[optimsiation_method_images.png]]
  
  
- 
+ * TODO
+  * Function representation
+  * Clarify Norms/Inner products
+  * Write out conjugate gradient method
