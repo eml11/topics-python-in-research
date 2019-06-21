@@ -50,9 +50,11 @@
    behaviour in the solution
  * e.g.
  
-  \phi = |G x - d|_N + \mu_1 |x|_N + \mu_2 |\nabla x |_N
+  \phi = |G x - d|_{N} + \mu_{1} |x|_{M} + \mu_{2} |\nabla x |_{M}
   
- * where \mu_1 and \mu_2 are trade off parameters
+ * where \mu_{1} and \mu_{2} are trade off parameters
+ * note strictly the norms are over different vector spaces
+ * \nabla x is an appropriate gradient of x (if this is defined). e.g. a central difference if x is a 1D array
  * We now minimise this new objective function
  * The first of these penalises the solver for making x too large
  * The second penalises the solver if x isn't smooth
@@ -64,10 +66,10 @@
  * One example is steepest decent - which is essentially a multi-dimensional Newton Raphson
  * The Algorithm is as follows
  
-  1) Calculate the gradient of \phi : \nabla \phi(x_i)
-  2) Conpute a new solution candidate x_{i+1} = x_i - h \nabla \phi(x_i), h is the step size 
+  1) Calculate the gradient of \phi : \nabla \phi(x_{i})
+  2) Conpute a new solution candidate x_{i+1} = x_{i} - h \nabla \phi(x_{i}), h is the step size 
   3) Compute \phi(x_{i+1})
-  4) Accept if \phi(x_i) > \phi(x_{i+1})
+  4) Accept if \phi(x_{i}) > \phi(x_{i+1})
  
  * This can be improved in several ways
   * The size of h can be determinded by a line-seach algorythm, i.e. a mini 1D optimisation problem to determine
